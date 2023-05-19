@@ -23,30 +23,33 @@ public class KullaniciGirisi {
         if (userName.equals("patika")) {
             if (password.equals("java123")) {
                 System.out.print("Giriş Yaptınız !");
-            } else {
+            }
+            else {
                 System.out.println("Hatalı Giriş Yaptınız");
-                System.out.print("Şifernizi sıfırlamak istiyorsanız ekrana \'yes\' yazın."+
+                System.out.print("Şifrenizi sıfırlamak istiyorsanız ekrana \'yes\' yazın."+
                         "\nSıfırlamak istemiyorsanız ekrana \'no\' yazınız.");
-            }
 
-            sifirlama=input.nextLine();
+                sifirlama=input.nextLine();
 
-            if(sifirlama.equals("no")){
-                System.out.print("Giriş Sonlandırıldı.");
-            }
-            else if(sifirlama.equals("yes")){
-                System.out.print("Yeni Şifrenizi Giriniz :");
-                newPassword=input.nextLine();
-
-                if(newPassword.equals("java123")){
-                    System.out.print("Hatalı Şifre Seçimi");
+                if(sifirlama.equals("no")){
+                    System.out.print("Giriş Sonlandırıldı.");
                 }
-                else{
-                    System.out.print("Şifrenizi Başarıyla Değiştirdiniz.");
+                else if(sifirlama.equals("yes")){
+                    System.out.print("Yeni Şifrenizi Giriniz :");
+                    newPassword=input.nextLine();
+
+                    if(newPassword.equals("java123")){
+                        System.out.print("Hatalı Şifre Seçimi");
+                    }
+                    else{
+                        System.out.print("Şifrenizi Başarıyla Değiştirdiniz.");
+                    }
+                }else{
+                    System.out.print("Hatalı Seçim Yaptınız !");
                 }
-            }else{
-                System.out.print("Hatalı Seçim Yaptınız !");
             }
+
+
         }else{
             System.out.print("Böyle Bir Kullanıcı Adı Bulunamadı");
         }
